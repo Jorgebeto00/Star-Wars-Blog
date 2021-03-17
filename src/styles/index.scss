@@ -1,12 +1,13 @@
 .newOverflow{
-    
-    height: 400px;
-    width: 1000px;
+    background-color: aqua;
+    display: inline-flex;
     overflow: auto;
-    white-space: nowrap;
+    max-width: 100%;
 }
 .card{
-    max-width: 300px;
-    display: inline-block; 
-    
+    flex-wrap: wrap;
+    width: 300px;
+   
 }
+
+
