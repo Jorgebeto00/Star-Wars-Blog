@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "./../component/card";
+import { Card } from "./card";
 
 export const Characters = () => {
 	return (

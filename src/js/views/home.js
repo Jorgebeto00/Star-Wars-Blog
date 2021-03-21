@@ -1,7 +1,7 @@
 import React from "react";
-import { Characters } from "./characters";
+import { Characters } from "../component/characters";
 import "../../styles/home.scss";
-import { Planets } from "./planets";
+import { Planets } from "../component/planets";
 
 export const Home = () => (
 	<div>
