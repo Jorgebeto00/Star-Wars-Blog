@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 
-
-
 export const Card = props => {
-
-    //const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="card p-1 m-2">

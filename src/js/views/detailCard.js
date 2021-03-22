@@ -5,10 +5,9 @@ import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const DetailCard = () => {
+	const { charactersid } = useParams();
+	const { store, actions } = useContext(Context);
 
-    const { charactersid } = useParams();
-    const { store, actions } = useContext(Context);
-    
 	return (
 		<div>
 			<div className="row">

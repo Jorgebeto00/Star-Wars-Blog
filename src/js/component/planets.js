@@ -19,19 +19,19 @@ export const Planets = () => {
 			<div className="box">
 				<CardPlanet />
 			</div>
-            <div className="box">
+			<div className="box">
 				<CardPlanet />
 			</div>
-            <div className="box">
+			<div className="box">
 				<CardPlanet />
 			</div>
-            <div className="box">
+			<div className="box">
 				<CardPlanet />
 			</div>
-            <div className="box">
+			<div className="box">
 				<CardPlanet />
 			</div>
-            <div className="box">
+			<div className="box">
 				<CardPlanet />
 			</div>
 		</div>
