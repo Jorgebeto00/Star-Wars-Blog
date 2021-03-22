@@ -16,8 +16,22 @@ export const Characters = () => {
 			<div className="box">
 				<Card />
 			</div>
-
 			<div className="box">
+				<Card />
+			</div>
+            <div className="box">
+				<Card />
+			</div>
+            <div className="box">
+				<Card />
+			</div>
+            <div className="box">
+				<Card />
+			</div>
+            <div className="box">
+				<Card />
+			</div>
+            <div className="box">
 				<Card />
 			</div>
 		</div>

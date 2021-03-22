@@ -1,6 +1,14 @@
 import React from "react";
 
+import { useParams } from "react-router-dom";
+
+import { Context } from "../store/appContext";
+
 export const DetailCard = () => {
+
+    const { charactersid } = useParams();
+    const { store, actions } = useContext(Context);
+    
 	return (
 		<div>
 			<div className="row">
@@ -21,32 +29,32 @@ export const DetailCard = () => {
 				<div className="col text-center">
 					<h4>Name</h4>
 					<br />
-					<p>the name</p>
+					<p>{store.characters[charactersid].name}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Birth year</h4>
 					<br />
-					<p>the birth year</p>
+					<p>{store.characters[charactersid].birth_year}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Gender</h4>
 					<br />
-					<p>the gender</p>
+					<p>{store.characters[charactersid].gender}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Height</h4>
 					<br />
-					<p>the height</p>
+					<p>{store.characters[charactersid].height}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Skin Color</h4>
 					<br />
-					<p>the skin color</p>
+					<p>{store.characters[charactersid].skin_color}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Eye Color</h4>
 					<br />
-					<p>the eye color</p>
+					<p>{store.characters[charactersid].eye_color}</p>
 				</div>
 			</div>
 		</div>

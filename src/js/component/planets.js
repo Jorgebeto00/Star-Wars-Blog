@@ -1,24 +1,38 @@
 import React from "react";
-import { Card } from "./card";
+import { CardPlanet } from "./cardPlanet";
 
 export const Planets = () => {
 	return (
 		<div className="newOverflow">
 			<div className="box">
-				<Card />
+				<CardPlanet />
 			</div>
 			<div className="box">
-				<Card />
+				<CardPlanet />
 			</div>
 			<div className="box">
-				<Card />
+				<CardPlanet />
 			</div>
 			<div className="box">
-				<Card />
+				<CardPlanet />
 			</div>
-
 			<div className="box">
-				<Card />
+				<CardPlanet />
+			</div>
+            <div className="box">
+				<CardPlanet />
+			</div>
+            <div className="box">
+				<CardPlanet />
+			</div>
+            <div className="box">
+				<CardPlanet />
+			</div>
+            <div className="box">
+				<CardPlanet />
+			</div>
+            <div className="box">
+				<CardPlanet />
 			</div>
 		</div>
 	);
