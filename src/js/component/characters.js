@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Card } from "./card";
 import { Context } from "./../store/appContext";
 
@@ -8,24 +8,26 @@ export const Characters = () => {
 	//const [cargo2, setCargo2] = useState(false);
 
 	setInterval(() => {
-		store.personajes.length > 0 ? setCargo(true) : "";
+		store.characters.length > 0 ? setCargo(true) : "";
 		//store.planets.length > 0 ? setCargo2(true) : "";
 	}, 2000);
 
 	return (
-		<div className="newOverflow">
+		<div>
 			{cargo ? (
-				<div className="cardsconteiner m-auto">
+				<div className="newOverflow">
 					{store.characters.map((item, index) => {
 						return (
-							<div className="displaycards" key={index}>
-								<Card
-									name={item.name}
-									gender={item.gender}
-									haircolor={item.hair_color}
-									eyecolor={item.eye_color}
-									pos={index}
-								/>
+							<div key={index}>
+								<div className="box">
+									<Card
+										name={item.name}
+										gender={item.gender}
+										haircolor={item.hair_color}
+										eyecolor={item.eye_color}
+										pos={index}
+									/>
+								</div>
 							</div>
 						);
 					})}
