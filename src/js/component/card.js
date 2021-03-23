@@ -25,7 +25,10 @@ export const Card = props => {
 						</Link>
 					</div>
 					<div className="col">
-						<button type="button" className="btn btn-outline-warning">
+						<button
+							type="button"
+							onClick={() => actions.favFunction(props.name)}
+							className="btn btn-outline-warning">
 							❤
 						</button>
 					</div>

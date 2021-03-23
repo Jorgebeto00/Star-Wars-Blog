@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "./../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -21,24 +23,28 @@ export const Navbar = () => {
 						data-bs-toggle="dropdown"
 						aria-expanded="false">
 						Favorites
-						<span className="badge bg-secondary">4</span>
+						<span className="badge bg-secondary">{store.favlist.length}</span>
 					</button>
 					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li>
-							<a className="dropdown-item" href="#">
-								Action
-							</a>
-						</li>
-						<li>
-							<a className="dropdown-item" href="#">
-								Another action
-							</a>
-						</li>
-						<li>
-							<a className="dropdown-item" href="#">
-								Something else here
-							</a>
-						</li>
+						{store.favlist.length > 0 ? (
+							store.favlist.map((item, index) => {
+								return (
+									<li className="dropdown-item" key={index}>
+										{item}{" "}
+										<button
+											type="button"
+											className="btn btn-danger"
+											onClick={() => actions.favFunctionDelete(index)}>
+											X
+										</button>
+									</li>
+								);
+							})
+						) : (
+							<li className="dropdown-item">Empty</li>
+						)}
+
+						{}
 					</ul>
 				</div>
 			</div>

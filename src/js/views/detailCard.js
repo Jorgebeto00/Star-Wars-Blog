@@ -20,7 +20,6 @@ export const DetailCard = () => {
 						Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
 						text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
 						Some text. Some text.
-						{id}
 					</p>
 				</div>
 			</div>

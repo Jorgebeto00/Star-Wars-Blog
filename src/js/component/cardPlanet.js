@@ -24,8 +24,11 @@ export const CardPlanet = props => {
 						</Link>
 					</div>
 					<div className="col">
-						<button type="button" className="btn btn-outline-warning">
-							{`<3`}
+						<button
+							type="button"
+							onClick={() => actions.favFunction(props.name)}
+							className="btn btn-outline-warning">
+							❤
 						</button>
 					</div>
 				</div>
