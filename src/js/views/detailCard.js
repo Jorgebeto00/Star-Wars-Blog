@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 
 import { useParams } from "react-router-dom";
 
-import { Context } from "../store/appContext";
+import { Context } from "./../store/appContext";
 
 export const DetailCard = () => {
-	const { charactersid } = useParams();
+	const { id } = useParams();
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -15,11 +15,12 @@ export const DetailCard = () => {
 					<img src="https://via.placeholder.com/800x600" />
 				</div>
 				<div className="col text-center">
-					<h2>{store.personajes[charactersid].name}</h2>
+					<h2>{store.characters[id].name}</h2>
 					<p>
 						Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
 						text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
-						Some text. Some text.{" "}
+						Some text. Some text.
+						{id}
 					</p>
 				</div>
 			</div>
@@ -28,32 +29,32 @@ export const DetailCard = () => {
 				<div className="col text-center">
 					<h4>Name</h4>
 					<br />
-					<p>{store.characters[charactersid].name}</p>
+					<p>{store.characters[id].name}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Birth year</h4>
 					<br />
-					<p>{store.characters[charactersid].birth_year}</p>
+					<p>{store.characters[id].birth_year}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Gender</h4>
 					<br />
-					<p>{store.characters[charactersid].gender}</p>
+					<p>{store.characters[id].gender}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Height</h4>
 					<br />
-					<p>{store.characters[charactersid].height}</p>
+					<p>{store.characters[id].height}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Skin Color</h4>
 					<br />
-					<p>{store.characters[charactersid].skin_color}</p>
+					<p>{store.characters[id].skin_color}</p>
 				</div>
 				<div className="col text-center">
 					<h4>Eye Color</h4>
 					<br />
-					<p>{store.characters[charactersid].eye_color}</p>
+					<p>{store.characters[id].eye_color}</p>
 				</div>
 			</div>
 		</div>

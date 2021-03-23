@@ -20,7 +20,7 @@ export const Card = props => {
 				</p>
 				<div className="buttons row">
 					<div className="col-9">
-						<Link to={"/detailCard/" + props.pos} type="button" className="btn btn-outline-primary">
+						<Link to={"/detail-card/" + props.pos} type="button" className="btn btn-outline-primary">
 							Learn more!
 						</Link>
 					</div>
