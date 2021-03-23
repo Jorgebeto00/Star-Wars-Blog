@@ -9,8 +9,7 @@ export const Characters = () => {
 
 	setInterval(() => {
 		store.characters.length > 0 ? setCargo(true) : "";
-		//store.planets.length > 0 ? setCargo2(true) : "";
-	}, 3000);
+	}, 5000);
 
 	return (
 		<div>

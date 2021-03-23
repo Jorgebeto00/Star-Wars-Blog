@@ -4,8 +4,7 @@ import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const DetailCardPlanet = () => {
-
-    const { planetid } = useParams();
+	const { planetid } = useParams();
 	const { store, actions } = useContext(Context);
 	return (
 		<div>
@@ -14,7 +13,7 @@ export const DetailCardPlanet = () => {
 					<img src="https://via.placeholder.com/800x600" />
 				</div>
 				<div className="col text-center">
-					<h2>{store.planets[planetid].name</h2>
+					<h2>{store.planets[planetid].name}</h2>
 					<p>
 						Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
 						text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
@@ -49,7 +48,7 @@ export const DetailCardPlanet = () => {
 					<br />
 					<p>{store.planets[planetid].rotation_period}</p>
 				</div>
-                <div className="col text-center">
+				<div className="col text-center">
 					<h4>Diameter</h4>
 					<br />
 					<p>{store.planets[planetid].diameter}</p>
