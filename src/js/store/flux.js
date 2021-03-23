@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			async fetchCharacter() {
-				await fetch("https://www.swapi.tech/api/people/")
+				await fetch("https://www.swapi.dev/api/people/")
 					.then(response => response.json())
 					.then(result => {
 						let list = [];
@@ -23,7 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 			async fetchPlanets() {
-				await fetch("https://www.swapi.tech/api/planets/")
+				await fetch("https://www.swapi.dev/api/planets/")
 					.then(response => response.json())
 					.then(result => {
 						let list2 = [];
