@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { useParams } from "react-router-dom";
 
@@ -15,7 +15,7 @@ export const DetailCard = () => {
 					<img src="https://via.placeholder.com/800x600" />
 				</div>
 				<div className="col text-center">
-					<h2>Name</h2>
+					<h2>{store.personajes[charactersid].name}</h2>
 					<p>
 						Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
 						text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.

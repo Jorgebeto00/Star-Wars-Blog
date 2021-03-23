@@ -10,7 +10,7 @@ export const Planets = () => {
 	setInterval(() => {
 		//store.characters.length > 0 ? setCargo(true) : "";
 		store.planets.length > 0 ? setCargo2(true) : "";
-	}, 2000);
+	}, 3000);
 	return (
 		<div>
 			{cargo2 ? (

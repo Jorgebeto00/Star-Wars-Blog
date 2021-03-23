@@ -6,8 +6,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favlist: []
 		},
 		actions: {
-			fetchCharacter() {
-				fetch("https://www.swapi.tech/api/people/")
+			async fetchCharacter() {
+				await fetch("https://www.swapi.tech/api/people/")
 					.then(response => response.json())
 					.then(result => {
 						let list = [];
@@ -22,8 +22,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log("error", error));
 			},
-			fetchPlanets() {
-				fetch("https://www.swapi.tech/api/planets/")
+			async fetchPlanets() {
+				await fetch("https://www.swapi.tech/api/planets/")
 					.then(response => response.json())
 					.then(result => {
 						let list2 = [];

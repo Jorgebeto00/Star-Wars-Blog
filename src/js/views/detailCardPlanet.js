@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
+
+import { Context } from "../store/appContext";
 
 export const DetailCardPlanet = () => {
+
+    const { planetid } = useParams();
+	const { store, actions } = useContext(Context);
 	return (
 		<div>
 			<div className="row">
@@ -8,7 +14,7 @@ export const DetailCardPlanet = () => {
 					<img src="https://via.placeholder.com/800x600" />
 				</div>
 				<div className="col text-center">
-					<h2>Name</h2>
+					<h2>{store.planets[planetid].name</h2>
 					<p>
 						Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some
 						text. Some text. Some text. Some text. Some text. Some text. Some text. Some text. Some text.
@@ -21,32 +27,32 @@ export const DetailCardPlanet = () => {
 				<div className="col text-center">
 					<h4>Name</h4>
 					<br />
-					<p>the name</p>
+					<p>{store.planets[planetid].name}</p>
 				</div>
 				<div className="col text-center">
-					<h4>Birth year</h4>
+					<h4>Climate</h4>
 					<br />
-					<p>the birth year</p>
+					<p>{store.planets[planetid].climate}</p>
 				</div>
 				<div className="col text-center">
-					<h4>Gender</h4>
+					<h4>Population</h4>
 					<br />
-					<p>the gender</p>
+					<p>{store.planets[planetid].population}</p>
 				</div>
 				<div className="col text-center">
-					<h4>Height</h4>
+					<h4>Orbital Period</h4>
 					<br />
-					<p>the height</p>
+					<p>{store.planets[planetid].orbital_period}</p>
 				</div>
 				<div className="col text-center">
-					<h4>Skin Color</h4>
+					<h4>Rotation Period</h4>
 					<br />
-					<p>the skin color</p>
+					<p>{store.planets[planetid].rotation_period}</p>
 				</div>
-				<div className="col text-center">
-					<h4>Eye Color</h4>
+                <div className="col text-center">
+					<h4>Diameter</h4>
 					<br />
-					<p>the eye color</p>
+					<p>{store.planets[planetid].diameter}</p>
 				</div>
 			</div>
 		</div>
