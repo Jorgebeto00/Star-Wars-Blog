@@ -4,7 +4,7 @@ import { Context } from "./../store/appContext";
 
 export const Planets = () => {
 	const { store, actions } = useContext(Context);
-	//const [cargo, setCargo] = useState(false);
+
 	const [cargo2, setCargo2] = useState(false);
 
 	setInterval(() => {
