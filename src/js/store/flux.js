@@ -17,7 +17,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 								.then(result2 => list.push(result2.result.properties))
 								.catch(error => console.log("error", error));
 						});
-
 						setStore({ characters: list });
 					})
 					.catch(error => console.log("error", error));

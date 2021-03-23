@@ -9,7 +9,7 @@ export const Characters = () => {
 
 	setInterval(() => {
 		store.characters.length > 0 ? setCargo(true) : "";
-	}, 5000);
+	}, 3000);
 
 	return (
 		<div>
