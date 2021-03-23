@@ -33,7 +33,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 								.then(result2 => list2.push(result2.result.properties))
 								.catch(error => console.log("error", error));
 						});
-
 						setStore({ planets: list2 });
 					})
 					.catch(error => console.log("error", error));
