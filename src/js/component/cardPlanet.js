@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 
 export const CardPlanet = props => {
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="card p-1 m-2">
 			<img src="https://via.placeholder.com/400x200" className="card-img-top" alt="..." />
